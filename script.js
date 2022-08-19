@@ -134,3 +134,49 @@ $(function() {
     // }).css(`background-color`, `yellow`);
 });
  */
+
+// MANIPULATING THE DOM:
+/*
+$(function() {
+    // $("ul ul:first").append("<li>I'm going to be the last sub-item");
+    // $("<li>I'm going to be the last item</li>").appendTo($("ul ul:first"));
+
+    // $("ul ul:first").prepend("<li>I'm going to be the first sub-item</li>");
+    // $("ul ul").prepend("<li>I'm going to be the first sub-item</li>");
+    // $("<li>I'm going to be the first sub-item</li>").prependTo($("ul ul:first"));
+    // $("<h4>David Prieto</h4>").prependTo("#content");
+
+    // $(".red-box").after("<div class='red-box'>Another Red</div>");
+    // $(".blue-box").before("<div class='blue-box'>Another Blue</div>");
+
+    // $(".blue-box").before(function() {
+    //     return "<div class='blue-box'>Blue 2</div>";
+    // });
+
+    // $(".blue-box").before($(".red-box"));
+    // $("p").after($("#list"));
+
+    // $(".red-box").after("<div class='red-box'>Another Red</div>");
+    // $(".green-box").after(function() {
+    //     return "<div class='green-box'>Another Green</div>";
+    // });
+    // $(".blue-box").after("<div class='blue-box'>Another Blue</div>");
+});
+ */
+
+/*
+$(function() {
+    // $("li").replaceWith("<li>Replaced</li>");
+    // $("li").replaceWith(function() {
+    //     return "<li>Replaced with function</li>";
+    // });
+    // let firstListItem = $("li:first");
+    // $("p:first").replaceWith(firstListItem);
+
+    // LINES 176 - 178 ACCOMPLISH THE SAME TASK - JUST DIFFERENT WAYS OF WRITING IT
+    // $(".red-box, .blue-box").replaceWith("<div class='green-box'>Another Green</div>");
+    // $("<div class='green-box'>Another Green</div>").replaceAll(".red-box, .blue-box");
+    // $("<div class='green-box'>Another Green</div>").replaceAll($(".red-box, .blue-box"));
+});
+ */
+
