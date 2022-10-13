@@ -106,7 +106,7 @@ $(function () {
 
 /*
 $(function() {
-    // $('#list').find('li').css('background-color', 'yellow');
+    $('#list').find('li').css('background-color', 'yellow');
     // $(`#list`).children(`li`).css(`background-color`, `yellow`);
     // $(`#list`).parents(`body`).css(`background-color`, `yellow`);
     // $(`#list`).parent().css(`background-color`, `yellow`);
@@ -180,4 +180,58 @@ $(function() {
 });
  */
 
+/*
+$(function() {
+    // $("li").remove();
+    // $("form").children().not("input:text, textarea, br").remove();
 
+    // let detachedListItem = $("li").detach();
+    // $("#content").append(detachedListItem);
+
+    // $("p:first").empty();
+    // $(".red-box, .green-box, .blue-box").empty();
+});
+ */
+
+/*
+$(function() {
+    // attr(), prop(), val()
+
+    // let specialLink = $('#special-link');
+    // console.log(specialLink.attr('href'));
+    // // set a new href value
+    // specialLink.attr('href', 'https://petersommerhoff.com');
+
+    // let checkbox = $('input:checkbox');
+    // console.log(checkbox.prop('checked'));
+    // console.log(checkbox.attr('checked'));
+
+    // let textInput1 = $('#input1');
+    // console.log(textInput1.val());
+    // // set the value
+    // textInput1.val('hello world');
+    // console.log(textInput1.val());
+
+    // let rangeInput = $('#range');
+    // console.log(rangeInput.val());
+});
+ */
+
+$(function() {
+    let galleryImage = $('.gallery').find('img').first();
+    let images = [
+        'https://images.pexels.com/photos/2387418/pexels-photo-2387418.jpeg?auto=compress&cs=tinysrgb&w=660&h=375&dpr=1',
+        'https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=660&h=375&dpr=1',
+        'https://images.pexels.com/photos/592284/pexels-photo-592284.jpeg?auto=compress&cs=tinysrgb&w=660&h=375&dpr=1'
+    ];
+
+    let i = 0;
+    setInterval(function() {
+        i = (i + 1) % images.length; // 2, 1, 0, 2, 1, 0, ....
+        galleryImage.fadeOut(function() {
+            $(this).attr('src', images[i]);
+            $(this).fadeIn();
+        });
+        // console.log(i + galleryImage.attr('src'));
+    }, 2000);
+});
