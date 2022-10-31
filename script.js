@@ -135,7 +135,7 @@ $(function() {
 });
  */
 
-// MANIPULATING THE DOM:
+// MANIPULATING THE DOM I:
 /*
 $(function() {
     // $("ul ul:first").append("<li>I'm going to be the last sub-item");
@@ -217,6 +217,7 @@ $(function() {
 });
  */
 
+/*
 $(function() {
     let galleryImage = $('.gallery').find('img').first();
     let images = [
@@ -235,3 +236,82 @@ $(function() {
         // console.log(i + galleryImage.attr('src'));
     }, 2000);
 });
+ */
+
+// MANIPULATING THE DOM II:
+/*
+$(function() {
+    // $(".gallery").css("display", "none"); // can use .hide() as well
+    //
+    // let redBox = $(".red-box");
+    // console.log(redBox.css("width"));
+    // console.log(redBox.width());
+    //
+    // redBox.css("background-color", "#AA7700");
+    // $("p").css("font-size", "18px");
+    // redBox.css("width", "+=20px");
+    //
+    // let properties = $("p").css(["font-size", "line-height", "color"]);
+    // console.log(properties);
+    // console.log(properties[0]);
+    //
+    // redBox.css("user-select", "none");
+    // redBox.css("user-select", function() {
+    //     return "none";
+    // })
+});
+ */
+
+/*
+$(function() {
+   // $("a").addClass("fancy-link"); // class = "...."
+   //  $("p:first").addClass("large emphasize");
+   //
+   //  $("li li").addClass(function(index) {
+   //      $(this).addClass("item-" + index);
+   //  });
+   //
+   //  $("div").addClass(function(index, currentClass) {
+   //      if (currentClass === "dummy") {
+   //          return "red-box";
+   //      }
+   //  });
+   //
+   //  $(".red-box").removeClass("red-box");
+   //  $(".red-box").removeClass("red-box").addClass("blue-box");
+
+    // $(".dummy").removeClass("dummy").addClass("green-box");
+});
+ */
+
+/*
+$(function() {
+    // let gallery = $(".gallery");
+    // let images = [
+    //     'https://images.pexels.com/photos/2387418/pexels-photo-2387418.jpeg?auto=compress&cs=tinysrgb&w=660&h=375&dpr=1',
+    //     'https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=660&h=375&dpr=1',
+    //     'https://images.pexels.com/photos/592284/pexels-photo-592284.jpeg?auto=compress&cs=tinysrgb&w=660&h=375&dpr=1'
+    // ];
+    // gallery.data("availableImages", images);
+    // console.log(gallery.data("availableImages"));
+    // gallery.data("name", "The Awesome Gallery");
+    // console.log(gallery.data());
+    // gallery.removeData("name");
+    // console.log(gallery.data("name")); // prints undefined because it was removed in the previous line
+});
+ */
+
+/*
+$(function() {
+    // text(), html()
+    // let firstPar = $("p:first");
+    // console.log(firstPar.text());
+    // console.log(firstPar.html());
+    //
+    // firstPar.text("<strong>Hello</strong> World!");
+    // firstPar.html("<strong>Hello</strong> World!");
+
+    // let firstPar = $("p:first");
+    // firstPar.html(firstPar.html() + " This was just appended.");
+});
+ */
