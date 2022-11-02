@@ -332,6 +332,7 @@ $(function() {
 });
  */
 
+/*
 $(function() {
     // :hover
     $("#btn-hover").hover(function() {
@@ -340,5 +341,6 @@ $(function() {
 
     $(".green-box").hover(function() {
         $(this).text("I was hovered");
-    })
-})
+    });
+});
+ */
