@@ -335,12 +335,53 @@ $(function() {
 /*
 $(function() {
     // :hover
-    $("#btn-hover").hover(function() {
-        alert("Button was hovered");
+    // $("#btn-hover").hover(function() {
+    //     alert("Button was hovered");
+    // });
+    //
+    // $(".green-box").hover(function() {
+    //     $(this).text("I was hovered");
+    // }, function() {
+    //     $(this).text("Green");
+    // });
+
+    // let blueBox = $(".blue-box");
+
+    // blueBox.mouseenter(function() {
+    //     $(this).stop().fadeTo(500, 0.7);
+    // });
+    // blueBox.mouseleave(function(){
+    //     $(this).stop().fadeTo(500, 1);
+    // });
+
+    // hover(handlerIn, handlerOut) - shorthand for mouse enter and mouse leave as performed above
+//     blueBox.hover(function() {
+//         $(this).stop().fadeTo(500, 0.7);
+//     }, function() {
+//         $(this).stop().fadeTo(500, 1);
+//     });
+// });
+ */
+
+/*
+$(function() {
+    // .on("click", function() {...})
+    $("html").on("click keydown", function () {
+       console.log("Mouse was clicked or key was pressed.");
     });
 
-    $(".green-box").hover(function() {
-        $(this).text("I was hovered");
+    let images = [
+        'https://images.pexels.com/photos/2387418/pexels-photo-2387418.jpeg?auto=compress&cs=tinysrgb&w=660&h=375&dpr=1',
+        'https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=660&h=375&dpr=1',
+        'https://images.pexels.com/photos/592284/pexels-photo-592284.jpeg?auto=compress&cs=tinysrgb&w=660&h=375&dpr=1'
+    ];
+
+    let i = 0;
+    $(".gallery").find("img").on("click", function() {
+        i = (i + 1) % images.length;
+        $(this).fadeOut(function() {
+            $(this).attr("src", images[i]).fadeIn();
+        });
     });
 });
  */
