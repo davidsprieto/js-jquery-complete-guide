@@ -366,22 +366,107 @@ $(function() {
 /*
 $(function() {
     // .on("click", function() {...})
-    $("html").on("click keydown", function () {
-       console.log("Mouse was clicked or key was pressed.");
-    });
+    function logEvent() {
+        console.log("Mouse was clicked or key was pressed.");
+    }
+    $("html").on("click keydown", logEvent);
 
     let images = [
+        'https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=660&h=375&dpr=1',
         'https://images.pexels.com/photos/2387418/pexels-photo-2387418.jpeg?auto=compress&cs=tinysrgb&w=660&h=375&dpr=1',
         'https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=660&h=375&dpr=1',
         'https://images.pexels.com/photos/592284/pexels-photo-592284.jpeg?auto=compress&cs=tinysrgb&w=660&h=375&dpr=1'
     ];
+    let galleryImage = $(".gallery").find("img");
 
     let i = 0;
-    $(".gallery").find("img").on("click", function() {
+    function switchImages() {
         i = (i + 1) % images.length;
         $(this).fadeOut(function() {
             $(this).attr("src", images[i]).fadeIn();
         });
+    }
+    galleryImage.on("click", switchImages);
+});
+ */
+
+/*
+$(function() {
+    // $("p").click(function() {
+    //     $(this).slideUp();
+    // });
+    // $("#content").append("<p>This is a dynamically added paragraph.</p>");
+
+    // Delegated Events
+    // $("#content").on("click", "p", function() {
+    //     $(this).slideUp();
+    // });
+    // $("#content").append("<p>This is a dynamically added paragraph.</p>");
+
+    // $("body").on("mouseenter", "li", function() {
+    //     $(this).css("color", "orange");
+    // });
+});
+ */
+
+/*
+$(function() {
+    $("#btn-click").click({
+        user: "Peter",
+        domain: "petersommerhoff.com"
+    }, function(event) {
+        greetUser(event.data);
+    });
+
+    function greetUser(eventData) {
+        let username = eventData.user || "Anonymous";
+        let domain = eventData.domain || "example.com";
+
+        alert("Welcome back " + username + " from " + domain + "!");
+    }
+});
+ */
+
+/*
+$(function() {
+    let galleryImages = $(".gallery").find("img");
+    galleryImages.css("width", "24%").css("opacity", "0.8");
+
+    galleryImages.mouseenter(function() {
+        $(this).stop().fadeTo(500, 1);
+    });
+
+    galleryImages.mouseleave(function() {
+        $(this).stop().fadeTo(500, 0.8);
+    });
+
+    let lightBox = $(".lightbox");
+
+    galleryImages.click(function() {
+        let source =  $(this).attr("src");
+        let image = $("<img>").attr("src", source).css("width", "100%");
+        lightBox.empty().append(image).fadeIn();
+    });
+
+    lightBox.click(function() {
+       $(this).stop().fadeOut();
+    });
+});
+ */
+
+/*
+$(function() {
+    // keypress() - no documentation.. stick to keydown() & keyup();
+    $("html").keydown(function(event) {
+        console.log(event.which);
+    });
+
+    $("html").keydown(function(event) {
+        if (event.which === 39) {
+            $(".blue-box").css("margin-left", "+=10px"); // can use .stop().animate() instead of .css();
+        } else if (event.which === 37) {
+            $(".blue-box").css("margin-left", "+=-10px");
+        }
     });
 });
  */
