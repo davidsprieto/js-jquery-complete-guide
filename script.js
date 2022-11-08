@@ -206,11 +206,11 @@ $(function() {
     // console.log(checkbox.prop('checked'));
     // console.log(checkbox.attr('checked'));
 
-    // let textInput1 = $('#input1');
-    // console.log(textInput1.val());
+    // let textName = $('#name');
+    // console.log(textName.val());
     // // set the value
-    // textInput1.val('hello world');
-    // console.log(textInput1.val());
+    // textName.val('hello world');
+    // console.log(textName.val());
 
     // let rangeInput = $('#range');
     // console.log(rangeInput.val());
@@ -470,3 +470,237 @@ $(function() {
     });
 });
  */
+
+// EVENTS II - FORMS:
+/*
+$(function() {
+    let inputFields = $("input:text, input:password, textarea");
+    inputFields.focus(function() {
+       $(this).css("box-shadow", "0 0 4px #666");
+    });
+    inputFields.blur(function() {
+        $(this).css("box-shadow", "none");
+    });
+
+    $("#name").blur(function() {
+       let text = $(this).val();
+       if (text.length <= 3) {
+           $(this).css("box-shadow", "0 0 4px #811");
+       } else {
+           $(this).css("box-shadow", "0 0 4px #181");
+       }
+    });
+});
+ */
+
+/*
+$(function() {
+    $("#checkbox").change(function() {
+       let isChecked = $(this).is(":checked");
+       if (isChecked) {
+           $(this).add("label[for='checkbox']").css("box-shadow", "0 0 4px #181");
+       } else {
+           $(this).add("label[for='checkbox']").css("box-shadow", "0 0 4px #811");
+       }
+    });
+
+    $("#selections").change(function() {
+       let selected = $(this).find(":selected").text();
+       alert(selected);
+    });
+});
+ */
+
+/*
+$(function() {
+   $("#form").submit(function() {
+       let textarea = $("#message");
+       if (textarea.val().trim() === " ") {
+           textarea.css("box-shadow", "0 0 4px #811");
+           event.preventDefault();
+       } else {
+           // form will be submitted.
+       }
+   });
+});
+ */
+
+//
+// $(function () {
+//     $("#form").submit(function () {
+//         let name = $("#name").val();
+//         let password = $("#password").val();
+//         let message = $("#message").val();
+//         let checked = $("#checkbox").is(":checked");
+//
+//         validateNameField(name, event);
+//         validatePasswordField(password, event);
+//         validateMessageField(message, event);
+//         validateCheckboxField(checked, event);
+//     });
+// });
+//
+// function validateNameField(name, event) {
+//     if (!isValidName(name)) {
+//         $("#name-feedback").text("Please enter at least 2 characters").css("color", "red");
+//         event.preventDefault();
+//     } else {
+//         $("#name-feedback").text("");
+//     }
+// }
+//
+// function isValidName(name) {
+//     return name.length >= 2;
+// }
+//
+// function validatePasswordField(password, event) {
+//     if (!isValidPassword(password)) {
+//         $("#password-feedback").text("Password needs to have least 10 characters and contain a number").css("color", "red");
+//         event.preventDefault();
+//     } else {
+//         $("#password-feedback").text("");
+//     }
+// }
+//
+// function isValidPassword(password) {
+//     return password.length >= 10 && /.*[0-9].*/.test(password);
+// }
+//
+// function validateMessageField(message, event) {
+//     if (!isValidMessage(message)) {
+//         $("#message-feedback").text("Please enter N/A if not leaving a message").css("color", "red");
+//         event.preventDefault();
+//     } else {
+//         $("#message-feedback").text("");
+//     }
+// }
+//
+// function isValidMessage(message) {
+//     return message.length >= 3 && message.trim() !== "";
+// }
+//
+// function validateCheckboxField(isChecked, event) {
+//     if (!isChecked) {
+//         $("#checkbox-feedback").text("Please agree to terms & conditions after reviewing them").css("color", "red");
+//         event.preventDefault();
+//     } else {
+//         $("#checkbox-feedback").text("");
+//     }
+// }
+
+
+// $(function () {
+//     let form = $("#form");
+//     enableFastFeedback(form);
+//
+//     form.submit(function () {
+//         let name = $("#name").val();
+//         let password = $("#password").val();
+//         let message = $("#message").val();
+//         let checked = $("#checkbox").is(":checked");
+//
+//         validateNameField(name, event);
+//         validatePasswordField(password, event);
+//         validateMessageField(message, event);
+//         validateCheckboxField(checked, event);
+//     });
+// });
+//
+// function enableFastFeedback(formElement) {
+//     let nameInput = formElement.find("#name");
+//     let passwordInput = formElement.find("#password");
+//     let messageInput = formElement.find("#message");
+//     let checkboxInput = formElement.find("#checkbox");
+//
+//     nameInput.blur(function() {
+//         let name = $(this).val();
+//         validateNameField(name, event);
+//
+//         if (!isValidName(name)) {
+//             $(this).css({"box-shadow": "0 0 4px #811", "border": "1px solid #600"});
+//         } else {
+//             $(this).css({"box-shadow": "0 0 4px #181", "border": "1px solid #060"});
+//         }
+//     });
+//
+//     passwordInput.blur(function() {
+//         let password = $(this).val();
+//         validatePasswordField(password, event);
+//
+//         if (!isValidPassword(password)) {
+//             $(this).css({"box-shadow": "0 0 4px #811", "border": "1px solid #600"});
+//         } else {
+//             $(this).css({"box-shadow": "0 0 4px #181", "border": "1px solid #060"});
+//         }
+//     });
+//
+//     messageInput.blur(function() {
+//         let message = $(this).val();
+//         validateMessageField(message, event);
+//
+//         if (!isValidMessage(message)) {
+//             $(this).css({"box-shadow": "0 0 4px #811", "border": "1px solid #600"});
+//         } else {
+//             $(this).css({"box-shadow": "0 0 4px #181", "border": "1px solid #060"});
+//         }
+//     });
+//
+//     checkboxInput.change(function() {
+//         let isChecked = $(this).is(":checked");
+//         validateCheckboxField(isChecked, event);
+//
+//         if (!isChecked) {
+//             $(this).add("label[for='checkbox']").css({"box-shadow": "0 0 4px #811", "border": "1px solid #600"});
+//         } else {
+//             $(this).add("label[for='checkbox']").css({"box-shadow": "0 0 4px #181", "border": "1px solid #060"});
+//         }
+//     });
+// }
+//
+// function validateNameField(name, event) {
+//     if (!isValidName(name)) {
+//         $("#name-feedback").text("Please enter at least 2 characters").css("color", "red");
+//         event.preventDefault();
+//     } else {
+//         $("#name-feedback").text("");
+//     }
+// }
+//
+// function isValidName(name) {
+//     return name.length >= 2;
+// }
+//
+// function validatePasswordField(password, event) {
+//     if (!isValidPassword(password)) {
+//         $("#password-feedback").text("Password needs to have least 10 characters and contain a number").css("color", "red");
+//         event.preventDefault();
+//     } else {
+//         $("#password-feedback").text("");
+//     }
+// }
+//
+// function isValidPassword(password) {
+//     return password.length >= 10 && /.*[0-9].*/.test(password);
+// }
+//
+// function validateMessageField(message, event) {
+//     if (!isValidMessage(message)) {
+//         $("#message-feedback").text("Please enter N/A if not leaving a message").css("color", "red");
+//         event.preventDefault();
+//     } else {
+//         $("#message-feedback").text("");
+//     }
+// }
+//
+// function isValidMessage(message) {
+//     return message.length >= 3 && message.trim() !== "";
+// }
+//
+// function validateCheckboxField(isChecked, event) {
+//     if (!isChecked) {
+//         $("#checkbox-feedback").text("Please agree to terms & conditions after reviewing them").css("color", "red");
+//         event.preventDefault();
+//     } else {
+//         $("#checkbox-feedback").text("");
+//     }
+// }
