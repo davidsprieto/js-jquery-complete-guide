@@ -703,4 +703,86 @@ $(function() {
 //     } else {
 //         $("#checkbox-feedback").text("");
 //     }
-// }
+//
+
+// AJAX:
+/*
+$(function() {
+    // $.get(), $.post(), $.ajax(), $.getJSON()
+
+    // $.load()
+    let code = $("#code");
+    code.load("script.js");
+
+    code.load("script.js", function(response, status) {
+        if (status === "error") {
+          alert("Could not find file");
+        }
+        console.log(response);
+    });
+});
+ */
+
+/*
+$(function() {
+    // JSON, $.getJSON()
+    let flickrApiUrl = "https://www.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+
+    $.getJSON(flickrApiUrl, {
+        // options
+        tags: "sun, beach",
+        tagmode: "any",
+        format: "json"
+    }).done(function(data) {
+        // executed if successful
+        console.log(data);
+        $.each(data.items, function(index, item) {
+            console.log(item);
+            $("<img>").attr("src", item.media.m).appendTo("#flickr");
+
+            if (index === 4) { // stops iterating through the images at 5 items
+                return false;
+            }
+        })
+    }).fail(function() {
+        // executed if unsuccessful
+        alert("Ajax call failed.");
+    });
+});
+ */
+
+/*
+$(function() {
+   let pokeApiUrl = "https://pokeapi.co/api/v2/generation/1";
+   let pokemonByName = "https://pokeapi.co/api/v2/pokemon/";
+
+   $.getJSON(pokeApiUrl).done(function(data) {
+       console.log(data);
+       $.each(data.pokemon_species, function (index, pokemon) {
+           let name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+           let link = $("<a>").attr("id", pokemon.name).attr("href", "#").append($("<strong>").text(name));
+           let par = $("<p>").html("Pokémon species no. " + (index + 1) + " is ").append(link);
+
+           link.click(function(event) {
+               $.getJSON(pokemonByName + pokemon.name).done(function(details) {
+                   console.log(details);
+                   let pokemonDiv = $("#pokemon-details");
+                   pokemonDiv.empty();
+                   pokemonDiv.append("<h2>" + name + "</h2>");
+                   pokemonDiv.append(("<img src= '" + details.sprites.front_default + "'>"));
+                   pokemonDiv.append(("<img src= '" + details.sprites.back_default + "'>"));
+                   pokemonDiv.append(("<img src= '" + details.sprites.front_shiny + "'>"));
+                   pokemonDiv.append(("<img src= '" + details.sprites.back_shiny + "'>"));
+               });
+               event.preventDefault();
+           });
+
+           par.appendTo("#pokemon");
+       });
+   }).fail(function() {
+       console.log("Request to Pokeapi failed");
+   }).always(function() {
+       console.log("Pokémon is rad.");
+   });
+});
+ */
