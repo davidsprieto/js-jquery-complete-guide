@@ -193,29 +193,28 @@ $(function() {
 });
  */
 
-/*
-$(function() {
-    // attr(), prop(), val()
 
-    // let specialLink = $('#special-link');
-    // console.log(specialLink.attr('href'));
-    // // set a new href value
-    // specialLink.attr('href', 'https://petersommerhoff.com');
-
-    // let checkbox = $('input:checkbox');
-    // console.log(checkbox.prop('checked'));
-    // console.log(checkbox.attr('checked'));
-
-    // let textName = $('#name');
-    // console.log(textName.val());
-    // // set the value
-    // textName.val('hello world');
-    // console.log(textName.val());
-
-    // let rangeInput = $('#range');
-    // console.log(rangeInput.val());
-});
- */
+// $(function() {
+//     // attr(), prop(), val()
+//
+//     let specialLink = $('#special-link');
+//     console.log(specialLink.attr('href'));
+//     // set a new href value
+//     specialLink.attr('href', 'https://petersommerhoff.com');
+//
+//     let checkbox = $('input:checkbox');
+//     console.log(checkbox.prop('checked'));
+//     console.log(checkbox.attr('checked'));
+//
+//     let textName = $('#name');
+//     console.log(textName.val());
+//     // set the value
+//     textName.val('hello world');
+//     console.log(textName.val());
+//
+//     let rangeInput = $('#range');
+//     console.log(rangeInput.val());
+// });
 
 /*
 $(function() {
