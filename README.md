@@ -1,1 +1,7 @@
-# Udemy Course: The Complete jQuery Course - From Beginner to Advanced!
+# The Complete jQuery Course - Udemy Course used to further deepen my knowledge & understanding of jQuery!
+
+Programming Language:
+- JavaScript
+
+Framework: 
+- jQuery
