@@ -3,5 +3,5 @@
 Programming Language:
 - JavaScript
 
-Framework: 
+Library: 
 - jQuery
