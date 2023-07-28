@@ -1,4 +1,4 @@
-# The Complete jQuery Course - Udemy Course Taken to Further Deepen my Knowledge & Understanding of jQuery!
+# The Complete jQuery Course
 
 Programming Language:
 - JavaScript
