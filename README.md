@@ -1,7 +1,1 @@
-# The Complete jQuery Course
-
-Programming Language:
-- JavaScript
-
-Library: 
-- jQuery
+# The Complete jQuery Guide Course
